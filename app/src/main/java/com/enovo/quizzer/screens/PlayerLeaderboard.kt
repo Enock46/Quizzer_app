@@ -1,4 +1,4 @@
-package com.enovo.quizzer.data
+package com.enovo.quizzer.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
@@ -17,6 +17,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.enovo.quizzer.R
+import com.enovo.quizzer.data.Player
 import kotlinx.coroutines.delay
 
 @Composable
@@ -109,9 +110,4 @@ fun PlayerCard(player: Player) {
     }
 }
 
-data class Player(
-    val nickname: String,
-    val subject: String,
-    val score: Int,
-    val imageResId: Int
-)
+

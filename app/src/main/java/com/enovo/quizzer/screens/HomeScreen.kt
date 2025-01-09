@@ -1,7 +1,6 @@
 package com.enovo.quizzer.screens
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
@@ -16,7 +15,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.enovo.quizzer.R
-import com.enovo.quizzer.data.PlayerLeaderboard
 
 @Composable
 fun HomeScreen(navController: NavHostController) {
@@ -58,16 +56,6 @@ fun HomeScreen(navController: NavHostController) {
             }
         }
 
-//        Button(
-//            onClick = { navController.navigate("quiz") },
-//            modifier = Modifier
-//                .fillMaxWidth()
-//                .padding(vertical = 16.dp)
-//        ) {
-//            Text(text = "Play Now")
-//        }
-
-        // Footer Section
         PlayerLeaderboard()
     }
 }

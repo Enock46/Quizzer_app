@@ -20,7 +20,7 @@ import kotlinx.coroutines.delay
 
 @Composable
 fun QuizScreen(navController: NavHostController) {
-    val quizQuestions = questionList // Replace with your quiz questions
+    val quizQuestions = questionList
     var currentQuestionIndex by remember { mutableStateOf(0) }
     var selectedAnswer by remember { mutableStateOf("") }
     var timer by remember { mutableStateOf(10) }

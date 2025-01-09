@@ -8,7 +8,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-//import com.enovo.quizzer.screens.CategoryQuestionsScreen
 import com.enovo.quizzer.screens.HomeScreen
 import com.enovo.quizzer.screens.QuizScreen
 import com.enovo.quizzer.ui.theme.QuizzerTheme
@@ -36,6 +35,7 @@ fun QuizzerApp() {
 //            val categoryName = backStackEntry.arguments?.getString("categoryName") ?: ""
 //            CategoryQuestionsScreen(navController, categoryName)
 //        }
+
     }
 }
 
