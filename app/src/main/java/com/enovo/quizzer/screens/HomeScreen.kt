@@ -22,7 +22,7 @@ fun HomeScreen(navController: NavHostController) {
         modifier = Modifier
             .fillMaxSize()
             .padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp) // Spaced layout for better presentation
+        verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         // Banner Section
         BannerSection(navController)
@@ -33,7 +33,7 @@ fun HomeScreen(navController: NavHostController) {
             modifier = Modifier.padding(bottom = 8.dp)
         )
 
-       //  LazyRow to display categories with improved performance and layout
+       //  LazyRow to display categories
         LazyRow(
             horizontalArrangement = Arrangement.spacedBy(16.dp),
             modifier = Modifier.fillMaxWidth()
@@ -55,7 +55,7 @@ fun HomeScreen(navController: NavHostController) {
                 )
             }
         }
-
+        //Leaderboard with hard coded data
         PlayerLeaderboard()
     }
 }
@@ -135,91 +135,12 @@ fun BannerSection(navController: NavHostController) {
                 }
             }
             Image(
-                painter = painterResource(id = R.drawable.winner2), // Replace with your trophy image resource
+                painter = painterResource(id = R.drawable.winner2), //  trophy image resource
                 contentDescription = "Trophy",
                 modifier = Modifier
                     .size(135.dp)
                     .clip(CircleShape)
             )
         }
-    }
-}
-
-//@Composable
-//fun FooterSection(navController: NavHostController) {
-//    Column(
-//        modifier = Modifier
-//            .fillMaxWidth()
-//            .padding(16.dp),
-//        horizontalAlignment = Alignment.CenterHorizontally
-//    ) {
-//        // App version or credits
-//        Text(
-//            text = "App Version 1.0",
-//            style = MaterialTheme.typography.bodySmall,
-//            modifier = Modifier.padding(bottom = 8.dp)
-//        )
-//
-//        // Settings or Help button
-//        Button(
-//            onClick = { navController.navigate("") }, // Modify this to your settings screen route
-//            modifier = Modifier.fillMaxWidth()
-//        ) {
-//            Text(text = "Settings")
-//        }
-//
-//        // Alternatively, a "Help" button could be used here as well
-//        Button(
-//            onClick = { navController.navigate("") }, // Modify this to your help screen route
-//
-//            modifier = Modifier.fillMaxWidth()
-//        ) {
-//            Text(text = "Help")
-//        }
-//    }
-//}
-
-@Composable
-fun FooterSection() {
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        // Display quiz progress
-        ProgressBarSection(progress = 0.6f) // Example progress (60%)
-
-        // Quiz stats
-        Text(
-            text = "Correct Answers: 12/20",
-            style = MaterialTheme.typography.bodyMedium,
-            modifier = Modifier.padding(top = 8.dp)
-        )
-
-        // Suggest a random quiz button
-        Button(
-            onClick = { /* Add navigation to random quiz */ },
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Text(text = "Try a Random Quiz")
-        }
-    }
-}
-
-@Composable
-fun ProgressBarSection(progress: Float) {
-    Column(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Text(text = "Progress", style = MaterialTheme.typography.bodySmall)
-
-        // Progress Bar
-        LinearProgressIndicator(
-            progress = progress,
-            modifier = Modifier.fillMaxWidth().padding(top = 8.dp),
-            color = MaterialTheme.colorScheme.primary
-        )
     }
 }
